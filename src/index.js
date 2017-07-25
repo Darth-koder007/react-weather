@@ -11,7 +11,7 @@ import { createStore } from 'redux';
  * Custom imports
  */
 import App from './components/app';
-import reducers from "./reducers";
+// import reducers from "./reducers";
 import styles from '../style/style.scss';
 import fonts from '../style/fontello.css';
 
@@ -19,8 +19,8 @@ import fonts from '../style/fontello.css';
  * Render function call
  */
 ReactDOM.render(
-  <Provider store={createStore(reducers)}>
+  // <Provider store={createStore(reducers)}>
     <App />
-  </Provider>,
-    document.querySelector('.container')
+  // </Provider>,
+    ,document.querySelector('.container')
   );
