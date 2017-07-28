@@ -36,6 +36,7 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "dom": "^0.0.3",
@@ -46,6 +47,7 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "redux": "^3.7.2",
+    "redux-promise": "^0.5.3",
     "url-loader": "^0.5.9"
   }
 }
