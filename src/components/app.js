@@ -7,6 +7,7 @@ import React, { Component } from 'react';
  * Custom component import
  */
 import SearchBar from '../containers/search_bar';
+import WeatherList from '../containers/weather_list'
 
 /**
  * App class
