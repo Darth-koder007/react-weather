@@ -19,6 +19,7 @@ class Chart extends Component{
         </Sparklines>
         <div>
           {this.average(this.props.data)}
+          ({this.props.units})
         </div>
       </div>
     );
