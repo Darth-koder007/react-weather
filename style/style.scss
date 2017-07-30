@@ -107,16 +107,85 @@ Modular Styles
   text-align: center;
 }
 
-/**************
-Loading screen
-**************/
-
-
 /***********
 custom
 ***********/
 
-td:first-of-type, td:first-of-type > div {
-  height: 200px;
-  width: 250px;
+html, body { height: 100%; }
+
+body {
+
+  .app {
+    .app-header{
+      width: 50%;
+      margin: 50px auto;
+      text-align: center;
+      .sub-header {
+
+      }
+    }
+
+    .component-wrapper {
+      .search-bar {
+        width: 50%;
+        margin:30px auto;
+        text-align: center;
+
+        input {
+          border-width: 0px 0px 2px 0px;
+          width: 500px;
+          height: 30px;
+          padding-left: 5px;
+          border-style: solid;
+          border-color: #c8c8c8;
+          font-size: 16px;
+        }
+
+        button {
+          margin-left: 20px;
+          border-width: 0;
+          height: 30px;
+          background: #FFF;
+          border-radius: 3px;
+          box-shadow: 0px 0px 2px 1px rgb(195, 190, 190);
+          background-color: white;
+          width: 80px;
+        }
+      }
+
+      .weather-list {
+
+        .weather-list-table {
+            margin: 0 auto;
+            min-width: 640px;
+
+          .weather-list-body {
+            td:first-child {
+              padding-left: 0;
+              padding-top: 0;
+            }
+
+            .weather-list-item {
+              height: 200px;
+              width: 250px;
+              padding-left: 15px;
+              padding-top: 45px;
+
+              .chart {
+
+                .chart-info {
+                  text-align: center;
+                }
+              }
+
+              .map-container {
+                height: 100%;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

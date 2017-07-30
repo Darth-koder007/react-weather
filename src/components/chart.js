@@ -12,15 +12,12 @@ class Chart extends Component{
 
   render() {
     return (
-      <div>
-        <Sparklines height={120} width={180} data={this.props.data}>
+      <div className="chart">
+        <Sparklines height={200} width={250} data={this.props.data}>
           <SparklinesLine color={this.props.color} />
           <SparklinesReferenceLine type="avg"/>
         </Sparklines>
-        <div>
-          {this.average(this.props.data)}
-          ({this.props.units})
-        </div>
+        <div className="chart-info">{this.average(this.props.data)} ({this.props.units})</div>
       </div>
     );
   }

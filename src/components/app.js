@@ -26,9 +26,15 @@ class App extends Component {
    */
   render() {
     return (
-      <div>
-        <SearchBar />
-        <WeatherList />
+      <div className="app">
+        <div className="app-header">
+          WEATHER APP
+          <span className="sub-header">...WINTER IS COMING</span>
+        </div>
+        <div className="component-wrapper">
+          <SearchBar />
+          <WeatherList />
+        </div>
       </div>
     );
   }
