@@ -22,13 +22,13 @@ class WeatherList extends Component {
           <GoogleMap lat={lat} lon={lon} zoom={10} />
         </td>
         <td className="weather-list-item">
-          <Chart color="red" data={temperatures} units="K" />
+          <Chart color="yellow" data={temperatures} units="K" />
         </td>
         <td className="weather-list-item">
-          <Chart color="blue" data={pressures} units="hPa" />
+          <Chart color="white" data={pressures} units="hPa" />
         </td>
         <td className="weather-list-item">
-          <Chart color="green" data={humidities} units="%" />
+          <Chart color="cyan" data={humidities} units="%" />
         </td>
       </tr>
     );
@@ -38,8 +38,8 @@ class WeatherList extends Component {
 
     if (this.props.weather.length <= 0) {
       return(
-        <div>
-          Search weather!!
+        <div className="placeholder">
+          SEARCH !!
         </div>
       )
     }

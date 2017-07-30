@@ -14,8 +14,8 @@ class Chart extends Component{
     return (
       <div className="chart">
         <Sparklines height={200} width={250} data={this.props.data}>
-          <SparklinesLine color={this.props.color} />
-          <SparklinesReferenceLine type="avg"/>
+          <SparklinesLine color={this.props.color} style={{ fill: this.props.color, fillOpacity: "1" }} />
+          <SparklinesReferenceLine type="avg" color="white"/>
         </Sparklines>
         <div className="chart-info">{this.average(this.props.data)} ({this.props.units})</div>
       </div>

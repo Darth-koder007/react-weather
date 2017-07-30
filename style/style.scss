@@ -108,28 +108,64 @@ Modular Styles
 }
 
 /***********
+colors
+***********/
+
+$primary: #003B46;
+$secondary: #07575B;
+$tertiary: #66A5AD;
+$font: #C4DFE6;
+
+/***********
 custom
 ***********/
 
 html, body { height: 100%; }
 
 body {
+  background-color: $primary;
+  color: $font;
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $tertiary;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $tertiary;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $tertiary;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: $tertiary;
+  }
 
   .app {
     .app-header{
-      width: 50%;
-      margin: 50px auto;
-      text-align: center;
-      .sub-header {
+      height: 120px;
+      display: flex;
+      justify-content: center;
 
+      .heading {
+        align-self: center;
+        font-size: 80px;
+        letter-spacing: 0.25em;
+
+        .sub-header {
+          font-size: 14px;
+          display: block;
+          text-align: end;
+          letter-spacing: 7px;
+          padding-right: 18px;
+        }
       }
     }
 
     .component-wrapper {
+      margin-top: 100px;
+
       .search-bar {
-        width: 50%;
-        margin:30px auto;
-        text-align: center;
+        display: flex;
+        justify-content: center;
 
         input {
           border-width: 0px 0px 2px 0px;
@@ -137,24 +173,35 @@ body {
           height: 30px;
           padding-left: 5px;
           border-style: solid;
-          border-color: #c8c8c8;
-          font-size: 16px;
+          border-color: $tertiary;
+          color: $font;
+          font-size: 18px;
+          background-color: transparent;
         }
 
         button {
           margin-left: 20px;
           border-width: 0;
-          height: 30px;
+          height: 50px;
           background: #FFF;
           border-radius: 3px;
-          box-shadow: 0px 0px 2px 1px rgb(195, 190, 190);
-          background-color: white;
-          width: 80px;
+          box-shadow: 0px 0px 2px 1px #c3bebe;
+          background-color: #66A5AD;
+          width: 120px;
+          color: #C4DFE6;
+          font-size: 30px;
         }
       }
 
-      .weather-list {
+      .placeholder {
+        display: flex;
+        justify-content: center;
+        margin: 100px auto;
+        font-size: 24px;
+      }
 
+      .weather-list {
+        padding-top: 50px;
         .weather-list-table {
             margin: 0 auto;
             min-width: 640px;
@@ -162,13 +209,12 @@ body {
           .weather-list-body {
             td:first-child {
               padding-left: 0;
-              padding-top: 0;
             }
 
             .weather-list-item {
               height: 200px;
               width: 250px;
-              padding-left: 15px;
+              padding-left: 50px;
               padding-top: 45px;
 
               .chart {

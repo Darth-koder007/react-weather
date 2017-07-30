@@ -28,8 +28,10 @@ class App extends Component {
     return (
       <div className="app">
         <div className="app-header">
-          WEATHER APP
-          <span className="sub-header">...WINTER IS COMING</span>
+          <p className="heading">
+            WEATHER APP
+            <span className="sub-header">...WINTER IS COMING</span>
+          </p>
         </div>
         <div className="component-wrapper">
           <SearchBar />

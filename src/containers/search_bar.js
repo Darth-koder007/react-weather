@@ -32,7 +32,7 @@ class SearchBar extends Component {
             value={this.state.term}
             onInput={this.onInputChange}
           />
-          <button type="submit">Submit</button>
+          <button type="submit">Search</button>
         </form>
       </div>
     );
