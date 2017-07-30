@@ -17,36 +17,49 @@ class WeatherList extends Component {
     const {lat, lon} = cityData.city.coord;
 
     return (
-      <tr key={name}>
-        <td><GoogleMap lat={lat} lon={lon} /></td>
-        <td>
-          <Chart color="red" data={temperatures} units="K" />
+      <tr key={name} className="weather-list-row">
+        <td className="weather-list-item">
+          <GoogleMap lat={lat} lon={lon} zoom={10} />
         </td>
-        <td>
-          <Chart color="blue" data={pressures} units="hPa" />
+        <td className="weather-list-item">
+          <Chart color="yellow" data={temperatures} units="K" />
         </td>
-        <td>
-          <Chart color="green" data={humidities} units="%" />
+        <td className="weather-list-item">
+          <Chart color="white" data={pressures} units="hPa" />
+        </td>
+        <td className="weather-list-item">
+          <Chart color="cyan" data={humidities} units="%" />
         </td>
       </tr>
     );
   }
 
   render() {
+
+    if (this.props.weather.length <= 0) {
+      return(
+        <div className="placeholder">
+          SEARCH !!
+        </div>
+      )
+    }
+
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>City</th>
-            <th>Temperature (K)</th>
-            <th>Pressure (hPa)</th>
-            <th>Humidity (%)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.props.weather.map(this.renderWeather)}
-        </tbody>
-      </table>
+      <div className="weather-list">
+        <table className="weather-list-table">
+          <thead className="weather-list-header">
+            <tr>
+              <th>City</th>
+              <th>Temperature (K)</th>
+              <th>Pressure (hPa)</th>
+              <th>Humidity (%)</th>
+            </tr>
+          </thead>
+          <tbody className="weather-list-body">
+            {this.props.weather.map(this.renderWeather)}
+          </tbody>
+        </table>
+      </div>
     );
   }
 }
